@@ -2,7 +2,7 @@
 function validateForm() {
     var filename = $('#file_name').val();
     var file = $('#select_file').val();
-    if ((filename == null || filename == '') && (file == null || file == '')) {
+    if ((filename == null || filename == '') || (file == null || file == '')) {
         alert('A file must be selected');
         return false;
     }
@@ -11,7 +11,7 @@ function validateForm() {
 
 $(function() {
 	//File selection input
-	$('#file_name').click(function() {
+	$('#file_name').focus(function() {
 		$('#select_file').click();
 	});
 	

@@ -123,7 +123,7 @@ function initializeClock(id, endtime) {
 
 $(function() {
 	//File selection input
-	$('#file_name').click(function() {
+	$('#file_name').focus(function() {
 		$('#select_file').click();
 	});
 	
